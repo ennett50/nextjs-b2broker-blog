@@ -1,7 +1,8 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
-import CommentForm from './CommentForm';
 import { useCommentForm } from '@/hooks/useCommentForm';
+
+import CommentForm from './CommentForm';
 
 jest.mock('@/hooks/useCommentForm', () => ({
   useCommentForm: jest.fn(),

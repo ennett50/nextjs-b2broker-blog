@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
 
-import ArticlesList from './ArticlesList';
 import { IArticle } from '@/types/article.types';
 import { IStrapiAttributes } from '@/types/common.types';
 import { MOCK_ARTICLE } from '@/utils/test-mock-data';
+
+import ArticlesList from './ArticlesList';
 
 const mockArticles: IStrapiAttributes<IArticle>[] = [
   { id: '1', attributes: { ...MOCK_ARTICLE.attributes, title: 'Article 1' } },

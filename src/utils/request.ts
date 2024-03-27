@@ -26,10 +26,6 @@ const config: AxiosRequestConfig = {
   baseURL: process.env.NEXT_PUBLIC_STRAPI_API_URL,
   timeout: 1000 * 60 * 2, // 2 min
   withCredentials: false,
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
-  },
 };
 
 export const strapiRequest: AxiosInstance = axios.create(config);

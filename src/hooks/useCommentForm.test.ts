@@ -1,8 +1,9 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useDispatch } from 'react-redux';
 
-import { useCommentForm } from './useCommentForm';
 import { useAddCommentMutation } from '@/api/comments.api';
+
+import { useCommentForm } from './useCommentForm';
 
 const articleId = 'test-article';
 

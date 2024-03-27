@@ -1,10 +1,11 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 
-import useArticles from './useArticles';
 import { fetchArticles } from '@/api/articles.api';
 import { IArticle } from '@/types/article.types';
 import { IStrapiAttributes } from '@/types/common.types';
 import { MOCK_ARTICLE } from '@/utils/test-mock-data';
+
+import useArticles from './useArticles';
 
 jest.mock('@/api/articles.api', () => ({
   fetchArticles: jest.fn(),

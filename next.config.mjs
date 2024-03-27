@@ -8,22 +8,12 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig = withSerwist({
-  // logging: {
-  //   fetches: {
-  //     fullUrl: true,
-  //   },
-  // },
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '1337',
-        pathname: '/uploads/**',
-      },
-      {
         protocol: 'https',
-        hostname: 'images.pexels.com',
+        hostname: 'pretty-renewal-04587256ac.media.strapiapp.com',
       },
     ],
   },

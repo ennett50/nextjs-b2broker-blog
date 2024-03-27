@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'B2bBroker Blog Progressive Web App',
-    short_name: 'B2bBroker Blog PWA',
+    name: 'B2broker Blog Progressive Web App',
+    short_name: 'B2broker Blog PWA',
     theme_color: '#ffffff',
     background_color: '#004740',
     display: 'fullscreen',
