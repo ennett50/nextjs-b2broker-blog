@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act, waitFor } from '@testing-library/react';
 
 import { fetchArticles } from '@/api/articles.api';
 import { IArticle } from '@/types/article.types';
@@ -37,7 +37,7 @@ describe('useArticles', () => {
   const total = 10;
 
   it('should fetch articles and update state correctly', async () => {
-    const { result, waitForNextUpdate } = renderHook(() =>
+    const { result } = renderHook(() =>
       useArticles({ initialArticles, total }),
     );
 
@@ -51,13 +51,12 @@ describe('useArticles', () => {
 
     expect(result.current.isLoading).toBe(true);
 
-    await waitForNextUpdate();
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.articles).toEqual([
       ...initialArticles,
       ...mockArticleData.data,
     ]);
-    expect(result.current.isLoading).toBe(false);
     expect(result.current.isLimitReached).toBe(false);
   });
 });

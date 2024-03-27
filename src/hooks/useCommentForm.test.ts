@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { useDispatch } from 'react-redux';
 
 import { useAddCommentMutation } from '@/api/comments.api';
